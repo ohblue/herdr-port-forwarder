@@ -36,14 +36,14 @@ The list scrolls vertically when it overflows. The form stays above it.
 
 ## Built from
 
-- **Mod** `mods/port-forward/`: `main.js` is a `View` exported from `gpui-kit`, with `v_flex`, `h_flex`, `div`, `InputState`, and `Input`. `tunnels.js` holds pure helpers (URL parsing, `ss`/`lsof` parsing, canonical state, `-L` value, terminal names, `lane()` for serial work) and imports nothing from `herdr`, so it can be tested under plain node.
-- **Mod metadata** `mods/port-forward/mod.json`: `{ "place": "none" }`. It is only shown where a layout block or `pane.split` puts it.
+- **Mod** `mods/port-forwarder/`: `main.js` is a `View` exported from `gpui-kit`, with `v_flex`, `h_flex`, `div`, `InputState`, and `Input`. `tunnels.js` holds pure helpers (URL parsing, `ss`/`lsof` parsing, canonical state, `-L` value, terminal names, `lane()` for serial work) and imports nothing from `herdr`, so it can be tested under plain node.
+- **Mod metadata** `mods/port-forwarder/mod.json`: `{ "place": "none" }`. It is only shown where a layout block or `pane.split` puts it.
 - **herdr** imports: `exec`, `focused`, `hc`, `machines`, `notify`, `props`, `setShared`, `shared`, `spaces`, `terminals`, `theme`, `window`, and `checking`.
 - **hc calls**: `run --bg --json --no-parent --no-notify --name`, `wait --output --timeout --json`, `read --lines`, `get --json`, `kill`, `rm`, `machine ls --json`.
 - **Programs**: `ssh` (through `hc run`), `ss`, `lsof`, `sleep`, `open` / `xdg-open`.
 - **Shared state**: one key, `port-forward`, shared by every connected screen and machine.
 - **No keys.json.** Every action is a click; there are no key bindings to merge.
-- **Layout placement**: a block with `content: { "mod": "port-forward" }`. The original setup puts it in a stack beside Files, Changes, and Pull requests in a 368px panel.
+- **Layout placement**: a block with `content: { "mod": "port-forwarder" }`. The original setup puts it in a stack beside Files, Changes, and Pull requests in a 368px panel.
 
 ## Watch out
 
@@ -60,7 +60,7 @@ The list scrolls vertically when it overflows. The form stays above it.
 
 ## Done when
 
-- `herdr-app check ~/.config/herdr-app/mods/port-forward` passes.
+- `herdr-app check ~/.config/herdr-app/mods/port-forwarder` passes.
 - With a remote machine connected, a terminal there printing `http://localhost:3000` while a server listens adds a row `localhost:3000`, opens it on click, and shows a `Tunnel ready` notification.
 - × removes the row and its `ssh` terminal; it does not come back while that URL is still on screen; after the URL scrolls away, printing it again opens a new tunnel.
 - Ending the terminal that printed the URL closes its tunnel and removes the row.

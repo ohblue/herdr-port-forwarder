@@ -23,15 +23,15 @@ Clone the repository and link the mod into Herdr's home:
 
 ```sh
 git clone https://github.com/ohblue/herdr-port-forwarder.git ~/Documents/github.com/ohblue/herdr-port-forwarder
-ln -s ~/Documents/github.com/ohblue/herdr-port-forwarder/mods/port-forward ~/.config/herdr-app/mods/port-forward
+ln -s ~/Documents/github.com/ohblue/herdr-port-forwarder/mods/port-forwarder ~/.config/herdr-app/mods/port-forwarder
 ```
 
 Herdr does not notice file changes inside a symlinked mod folder, so after a `git pull` restart Herdr or recreate the link.
 
-`mods/port-forward/mod.json` says `{ "place": "none" }`: Herdr only shows the mod where a layout or a command puts it. Either split it beside a terminal for a quick look:
+`mods/port-forwarder/mod.json` says `{ "place": "none" }`: Herdr only shows the mod where a layout or a command puts it. Either split it beside a terminal for a quick look:
 
 ```sh
-herdr-app do pane.split:right --mod port-forward
+herdr-app do pane.split:right --mod port-forwarder
 ```
 
 or add a block to your layout where you want it to stay. Inside a stack:
@@ -40,7 +40,7 @@ or add a block to your layout where you want it to stay. Inside a stack:
 {
   "id": "ports",
   "type": "block",
-  "content": { "mod": "port-forward" }
+  "content": { "mod": "port-forwarder" }
 }
 ```
 
