@@ -50,7 +50,7 @@ Use exactly one copy in your layout. Each visible or hidden copy in a layout run
 
 The panel lists connected machines as chips, a port input, and an Add button. Above them, `Port tunnels` and a count show how many tunnels are open.
 
-- **Automatic:** start a dev server in a terminal on a remote machine. When the URL appears, a row like `m5mba localhost:3000` appears. A notification says the tunnel is ready.
+- **Automatic:** start a dev server in a terminal on a remote machine. When the URL appears, a row like `laptop localhost:3000` appears. A notification says the tunnel is ready.
 - **Manual:** choose a machine, type the remote port, press Add. If the remote port is already tunneled, it replaces the old tunnel.
 - **Open:** click the row. It runs `open` on macOS or `xdg-open` elsewhere with the local URL.
 - **Close:** click ×. The tunnel is dismissed and will not reopen while any terminal still shows that URL.
