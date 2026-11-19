@@ -1,4 +1,4 @@
-# Herdr Ports
+# Herdr Port Forwarder
 
 Port tunnels for the Herdr desktop app. A remote terminal that prints a `localhost` URL gets an `ssh -L` tunnel for that port; a panel lists the tunnels and opens them in the browser. Tunnels close when the terminal that printed the URL ends.
 

@@ -1,4 +1,4 @@
-# Herdr Ports
+# Herdr Port Forwarder
 
 ![Port tunnels in the Herdr sidebar](preview.png)
 
@@ -22,8 +22,8 @@ Port tunnels for the [Herdr](https://herdr.dev) desktop app. When a terminal on 
 Clone the repository and link the mod into Herdr's home:
 
 ```sh
-git clone https://github.com/ohblue/herdr-ports.git ~/Documents/github.com/ohblue/herdr-ports
-ln -s ~/Documents/github.com/ohblue/herdr-ports/mods/port-forward ~/.config/herdr-app/mods/port-forward
+git clone https://github.com/ohblue/herdr-port-forwarder.git ~/Documents/github.com/ohblue/herdr-port-forwarder
+ln -s ~/Documents/github.com/ohblue/herdr-port-forwarder/mods/port-forward ~/.config/herdr-app/mods/port-forward
 ```
 
 Herdr does not notice file changes inside a symlinked mod folder, so after a `git pull` restart Herdr or recreate the link.
